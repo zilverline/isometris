@@ -1,20 +1,21 @@
 const reducer = (state = {current: null, board: [], tick: 0}, action) => {
-  switch (action.type) {
+  state = update(state, clone, moveToBoard);
 
+  switch (action.type) {
     case 'TICK':
-      return update(state, clone, incrementTick, spawnTetrimino, moveToBoard, setCurrentY);
+      return update(state, incrementTick, spawnTetrimino, setCurrentY);
 
     case 'MOVE_LEFT':
-      return update(state, clone, setCurrentX(-1));
+      return update(state, setCurrentX(-1));
 
     case 'MOVE_RIGHT':
-      return update(state, clone, setCurrentX(1));
+      return update(state, setCurrentX(1));
 
     case 'ROTATE':
-    return state;
+      return state;
 
     case 'DROP':
-      return update(state, clone, drop);
+      return update(state, drop);
 
     default:
       return state;
@@ -59,7 +60,7 @@ const setCurrentY = (state, drop=false) => {
 }
 
 const moveToBoard = (state) => {
-  if (state.current.y > 15) {
+  if (state.current && state.current.y >= 15) {
     state.board = [...state.board, state.current];
     state.current = null;
   }
