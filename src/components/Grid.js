@@ -2,23 +2,40 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Tetrimino from './Tetrimino';
 import './Grid.scss';
-import { spawnTetrimino } from '../actions';
+import { tick } from '../actions';
 
 export class Grid extends Component {
+  componentDidMount() {
+    this.tick = setInterval(this.props.onTick, 500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.tick);
+  }
+
   render() {
+    const { board, current } = this.props;
+
     return (
       <div className="grid">
-        {this.props.tetriminos.map((t) => <Tetrimino key={t.createdAt} shape={t.shape} />)}
-        <button onClick={this.props.onButtonClick}>Spawn tetrimino</button>
+        { current ? renderTetromino(current) : null }
+        { board.map((t) => renderTetromino(t)) }
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({ tetriminos: state.tetriminos })
+const renderTetromino = (t) =>
+  <div key={t.createdAt} className='tetrimino-wrapper' style={{ top: `${t.y}em`, left: `${t.x}em` }}>
+    <Tetrimino shape={t.shape} />
+  </div>
 
-const mapDispatchToProps = (dispatch) => (
-  { onButtonClick: () => dispatch(spawnTetrimino) }
-);
+
+const mapStateToProps = (state) => ({
+  board: state.board,
+  current: state.current
+});
+
+const mapDispatchToProps = (dispatch) => ({ onTick: () => dispatch(tick) });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Grid);

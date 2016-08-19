@@ -1,1 +1,1 @@
-export const spawnTetrimino = { type: 'SPAWN_TETRIMINO' }
+export const tick = { type: 'TICK' }

@@ -5,6 +5,7 @@ import { Grid } from '../components/Grid';
 storiesOf('Grid', module)
   .add('grid', () => (
     <Grid
-      tetriminos={[{shape: 'L'}, {shape: 'J'}]}
+      current={null}
+      board={[{shape: 'L', x: 1, y: 1}, {shape: 'J', x: 5, y: 5}]}
     />
   ));
