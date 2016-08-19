@@ -1,15 +1,36 @@
 .tetrimino {
-  &.O {
-    width: 2em;
-    height: 2em;
-  }
+  display: flex;
+  flex-flow: column wrap;
+  flex-direction: column-reverse;
+  transform: rotateX(45deg) rotateY(45deg);
+  transform-style: preserve-3d;
 
   &.I {
     width: 1em;
     height: 4em;
   }
 
+  &.J {
+    width: 2em;
+    height: 3em;
+  }
+
+  &.L {
+    width: 2em;
+    height: 3em;
+  }
+
+  &.O {
+    width: 2em;
+    height: 2em;
+  }
+
   &.S {
+    width: 3em;
+    height: 2em;
+  }
+
+  &.T {
     width: 3em;
     height: 2em;
   }
@@ -18,24 +39,4 @@
     width: 3em;
     height: 2em;
   }
-
-  &.L {
-    width: 2em;
-    height: 3em;
-  }
-
-  &.J {
-    width: 2em;
-    height: 3em;
-  }
-
-  &.T {
-    width: 3em;
-    height: 2em;
-  }
-
-  &.rotate-0 { transform: rotate(0deg); }
-  &.rotate-90 { transform: rotate(90deg) }
-  &.rotate-180 { transform: rotate(180deg) }
-  &.rotate-270 { transform: rotate(270deg) }
 }

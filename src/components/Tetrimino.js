@@ -23,14 +23,14 @@ class Tetrimino extends Component {
   J(rotation) {
     return (
       <div className={`tetrimino J rotate-${rotation}`}>
-        <Block color='transparent' />
         <Block color='yellow' />
-
         <Block color='transparent' />
-        <Block color='yellow' />
+        <Block color='transparent' />
 
         <Block color='yellow' />
         <Block color='yellow' />
+        <Block color='yellow' />
+
       </div>
     );
   }
@@ -39,13 +39,12 @@ class Tetrimino extends Component {
     return (
       <div className={`tetrimino L rotate-${rotation}`}>
         <Block color='magenta' />
-        <Block color='transparent' />
+        <Block color='magenta' />
+        <Block color='magenta' />
 
         <Block color='magenta' />
         <Block color='transparent' />
-
-        <Block color='magenta' />
-        <Block color='magenta' />
+        <Block color='transparent' />
       </div>
     );
   }
@@ -64,13 +63,13 @@ class Tetrimino extends Component {
   S(rotation) {
     return (
       <div className={`tetrimino S rotate-${rotation}`}>
-        <Block color='transparent' />
         <Block color='cyan' />
+        <Block color='transparent' />
         <Block color='cyan' />
 
         <Block color='cyan' />
-        <Block color='cyan' />
         <Block color='transparent' />
+        <Block color='cyan' />
       </div>
     );
   }
@@ -79,10 +78,9 @@ class Tetrimino extends Component {
     return (
       <div className={`tetrimino T rotate-${rotation}`}>
         <Block color='lime' />
-        <Block color='lime' />
-        <Block color='lime' />
-
         <Block color='transparent' />
+        <Block color='lime' />
+        <Block color='lime' />
         <Block color='lime' />
         <Block color='transparent' />
       </div>
@@ -92,13 +90,13 @@ class Tetrimino extends Component {
   Z(rotation) {
     return (
       <div className={`tetrimino Z rotate-${rotation}`}>
-        <Block color='orange' />
-        <Block color='orange' />
         <Block color='transparent' />
+        <Block color='orange' />
+        <Block color='orange' />
 
+        <Block color='orange' />
+        <Block color='orange' />
         <Block color='transparent' />
-        <Block color='orange' />
-        <Block color='orange' />
       </div>
     );
   }
