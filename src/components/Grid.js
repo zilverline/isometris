@@ -19,8 +19,8 @@ export class Grid extends Component {
 
     return (
       <div className="grid">
-        { current ? renderTetromino(current) : null }
         { board.map((t) => renderTetromino(t)) }
+        { current ? renderTetromino(current) : null }
       </div>
     );
   }
