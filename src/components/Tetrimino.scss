@@ -2,8 +2,6 @@
   display: flex;
   flex-flow: column wrap;
   flex-direction: column-reverse;
-  transform: rotateX(45deg) rotateY(45deg);
-  transform-style: preserve-3d;
 
   &.I {
     width: 1em;

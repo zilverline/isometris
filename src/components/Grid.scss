@@ -4,6 +4,9 @@
   background-image: -webkit-linear-gradient(hsla(0,0%,0%,.1) 2.5%, transparent 2.5%, transparent 97.5%, hsla(0,0%,0%,.1) 97.5%),
                     -webkit-linear-gradient(left, hsla(0,0%,0%,.1) 2.5%, transparent 2.5%, transparent 97.5%, hsla(0,0%,0%,.1) 97.5%);
 
+  transform: rotateX(45deg) rotateY(45deg);
+  transform-style: preserve-3d;
+
   background-size: 1em 1em;
   width: 10em;
   height: 20em;
