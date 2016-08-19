@@ -4,14 +4,14 @@ import './Tetrimino.scss'
 
 class Tetrimino extends Component {
   render() {
-    const { shape } = this.props;
+    const { shape, rotation } = this.props;
 
-    return this[shape]();
+    return this[shape](rotation);
   }
 
-  I() {
+  I(rotation) {
     return (
-      <div className={`tetrimino I`}>
+      <div className={`tetrimino I rotate-${rotation}`}>
         <Block color='red' />
         <Block color='red' />
         <Block color='red' />
@@ -20,9 +20,9 @@ class Tetrimino extends Component {
     );
   }
 
-  J() {
+  J(rotation) {
     return (
-      <div className={`tetrimino J`}>
+      <div className={`tetrimino J rotate-${rotation}`}>
         <Block color='transparent' />
         <Block color='yellow' />
 
@@ -35,9 +35,9 @@ class Tetrimino extends Component {
     );
   }
 
-  L() {
+  L(rotation) {
     return (
-      <div className={`tetrimino L`}>
+      <div className={`tetrimino L rotate-${rotation}`}>
         <Block color='magenta' />
         <Block color='transparent' />
 
@@ -50,9 +50,9 @@ class Tetrimino extends Component {
     );
   }
 
-  O() {
+  O(rotation) {
     return (
-      <div className={`tetrimino O`}>
+      <div className={`tetrimino O rotate-${rotation}`}>
         <Block color='blue' />
         <Block color='blue' />
         <Block color='blue' />
@@ -61,9 +61,9 @@ class Tetrimino extends Component {
     );
   }
 
-  S() {
+  S(rotation) {
     return (
-      <div className={`tetrimino S`}>
+      <div className={`tetrimino S rotate-${rotation}`}>
         <Block color='transparent' />
         <Block color='cyan' />
         <Block color='cyan' />
@@ -75,9 +75,9 @@ class Tetrimino extends Component {
     );
   }
 
-  T() {
+  T(rotation) {
     return (
-      <div className={`tetrimino T`}>
+      <div className={`tetrimino T rotate-${rotation}`}>
         <Block color='lime' />
         <Block color='lime' />
         <Block color='lime' />
@@ -89,9 +89,9 @@ class Tetrimino extends Component {
     );
   }
 
-  Z() {
+  Z(rotation) {
     return (
-      <div className={`tetrimino Z`}>
+      <div className={`tetrimino Z rotate-${rotation}`}>
         <Block color='orange' />
         <Block color='orange' />
         <Block color='transparent' />
@@ -104,10 +104,10 @@ class Tetrimino extends Component {
   }
 }
 
-export const I = () => <Tetrimino shape='I' />
-export const J = () => <Tetrimino shape='J' />
-export const L = () => <Tetrimino shape='L' />
-export const O = () => <Tetrimino shape='O' />
-export const S = () => <Tetrimino shape='S' />
-export const T = () => <Tetrimino shape='T' />
-export const Z = () => <Tetrimino shape='Z' />
+export const I = (props) => <Tetrimino {...props} shape='I' />
+export const J = (props) => <Tetrimino {...props} shape='J' />
+export const L = (props) => <Tetrimino {...props} shape='L' />
+export const O = (props) => <Tetrimino {...props} shape='O' />
+export const S = (props) => <Tetrimino {...props} shape='S' />
+export const T = (props) => <Tetrimino {...props} shape='T' />
+export const Z = (props) => <Tetrimino {...props} shape='Z' />
