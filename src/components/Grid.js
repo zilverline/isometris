@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Shape from './Shape';
-import './Grid.css';
+import { L } from './Tetrimino';
+import './Grid.scss';
 
 class Grid extends Component {
   render() {
@@ -8,9 +8,7 @@ class Grid extends Component {
 
     return (
       <div className="grid">
-        <Shape color="red" />
-        <Shape color="red" />
-        <Shape color="red" />
+        <L />
       </div>
     );
   }

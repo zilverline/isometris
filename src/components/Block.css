@@ -1,9 +1,0 @@
-.block {
-  width: 1em;
-  height: 1em;
-  border: 3px solid #222;
-}
-
-.block.red {
-  background-color: red;
-}

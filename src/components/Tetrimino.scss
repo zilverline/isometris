@@ -1,0 +1,36 @@
+.tetrimino {
+  &.O {
+    width: 2em;
+    height: 2em;
+  }
+
+  &.I {
+    width: 1em;
+    height: 4em;
+  }
+
+  &.S {
+    width: 3em;
+    height: 2em;
+  }
+
+  &.Z {
+    width: 3em;
+    height: 2em;
+  }
+
+  &.L {
+    width: 2em;
+    height: 3em;
+  }
+
+  &.J {
+    width: 2em;
+    height: 3em;
+  }
+
+  &.T {
+    width: 3em;
+    height: 2em;
+  }
+}

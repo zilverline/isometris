@@ -1,0 +1,19 @@
+.block {
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+  float: left;
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  &.orange { background-color: orange; }
+  &.cyan { background-color: cyan; }
+  &.red { background-color: red; }
+  &.yellow { background-color: yellow; }
+  &.magenta { background-color: magenta; }
+  &.lime { background-color: lime; }
+  &.blue { background-color: blue; }
+}
