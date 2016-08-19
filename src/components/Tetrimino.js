@@ -104,6 +104,7 @@ class Tetrimino extends Component {
   }
 }
 
+export default Tetrimino;
 export const I = (props) => <Tetrimino {...props} shape='I' />
 export const J = (props) => <Tetrimino {...props} shape='J' />
 export const L = (props) => <Tetrimino {...props} shape='L' />
